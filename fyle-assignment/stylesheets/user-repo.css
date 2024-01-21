@@ -1,0 +1,29 @@
+.user-repo-comp {
+	margin: 25px 0;
+	padding: 10px;
+	border: 2px solid var(--border-color);
+	border-radius: 5px;
+
+	.repo-details {
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+
+		h2 {
+			color: var(--primary-color);
+			text-transform: capitalize;
+		}
+		.languages {
+			display: flex;
+			gap: 10px;
+			flex-wrap: wrap;
+			span {
+				text-transform: capitalize;
+				padding: 5px;
+				color: white;
+				background-color: var(--primary-color);
+				border-radius: 3px;
+			}
+		}
+	}
+}

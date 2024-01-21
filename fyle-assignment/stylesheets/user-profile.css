@@ -1,0 +1,42 @@
+.user-profile-comp {
+	.details-container {
+		display: flex;
+		align-items: center;
+		gap: 50px;
+		margin-bottom: 20px;
+		flex-wrap: wrap;
+
+		.image-container {
+			img {
+				width: 150px;
+				border-radius: 50%;
+				border: 5px double var(--border-color);
+			}
+		}
+		.user-details {
+			display: flex;
+			flex-direction: column;
+			gap: 5px;
+			h1 {
+				text-transform: capitalize;
+				color: var(--primary-color);
+			}
+		}
+	}
+
+	p {
+		img {
+			width: 18px;
+			margin-right: 5px;
+			vertical-align: middle;
+		}
+		a {
+			text-decoration: none;
+			color: var(--primary-color);
+			&:hover {
+				text-decoration: underline;
+				color: var(--dark-hover-color);
+			}
+		}
+	}
+}

@@ -1,0 +1,45 @@
+#pagination {
+	width: max-content;
+	display: flex;
+	align-items: center;
+	margin: auto;
+	flex-direction: column;
+	gap: 10px;
+
+	label {
+		input {
+			margin-left: 10px;
+			&::-webkit-outer-spin-button,
+			&::-webkit-inner-spin-button {
+				-webkit-appearance: none;
+				margin: 0;
+			}
+		}
+	}
+
+	button {
+		padding: 5px 10px;
+		color: white;
+		background-color: var(--primary-color);
+		border-radius: 3px;
+		outline: none;
+		cursor: pointer;
+		border: none;
+	}
+
+	.pages {
+		display: flex;
+		gap: 5px;
+
+		.page {
+			&.current {
+				background-color: var(--dark-hover-color);
+			}
+		}
+	}
+	.history-container {
+		display: flex;
+		justify-content: space-between;
+		width: 100%;
+	}
+}
