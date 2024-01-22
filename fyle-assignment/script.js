@@ -16,6 +16,7 @@ export default class Script {
         this.octokitAPI = new OctokitAPI();
         this.templateContainer.innerHTML += loader();
         await this.octokitAPI.activate();
+        if (this.errorMsg()) return;
         this.templateContainer.querySelector('.loader').remove();
         this.urlParams = new URLSearchParams(window.location.search);
         this.username = this.urlParams.get('username');
