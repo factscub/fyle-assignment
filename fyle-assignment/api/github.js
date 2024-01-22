@@ -7,11 +7,12 @@ export class OctokitAPI {
     async activate() {
         try {
             this.loadingOPtions = {
+                'PAGE_LOAD': 'PAGE_LOAD',
                 'USER_PROFILE': 'USER_PROFILE',
                 'REPOS': 'REPOS',
                 'LANGUAGES': 'LANGUAGES'
             };
-            this.loading = '';
+            this.loading = this.loadingOPtions.PAGE_LOAD;
             this.error = '';
             const response = await fetch('https://fyle-api.onrender.com/api/github-token');
             const data = await response.json();
@@ -22,6 +23,7 @@ export class OctokitAPI {
             this.userData = {};
             this.reposData = {};
         } catch (error) {
+            this.error = rawData().errorTypeOptions.fetch_error;
             console.error('Error initializing:', error);
         }
     }

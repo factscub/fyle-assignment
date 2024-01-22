@@ -12,9 +12,11 @@ export default class Script {
     }
 
     async activate() {
-        this.octokitAPI = new OctokitAPI();
-        await this.octokitAPI.activate();
         this.templateContainer = document.getElementById('template-container');
+        this.octokitAPI = new OctokitAPI();
+        this.templateContainer.innerHTML += loader();
+        await this.octokitAPI.activate();
+        this.templateContainer.querySelector('.loader').remove();
         this.urlParams = new URLSearchParams(window.location.search);
         this.username = this.urlParams.get('username');
         this.per_page = this.urlParams.get('per_page');
